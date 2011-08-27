@@ -1,0 +1,18 @@
+<p>
+  <b>Filename:</b>
+  <%=h @replay.filename %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @replay.size %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @replay.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_replay_path(@replay) %> |
+<%= link_to 'Back', replays_path %>
