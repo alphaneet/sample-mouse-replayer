@@ -7,7 +7,7 @@ jersey      1.8
 
 - 解説
 public/ のディレクトリ内に全て入っています。
-必要な jar は public/MouseReplayer.zip の中にあります。
+実行に必要な jar は public/MouseReplayer.zip の中にあります。
 
 lib.scala             - 大体使い回す util 的なコード
 common.scala          - アプレットとアプリケーションで共通のコード
@@ -38,23 +38,29 @@ ruby        1.8.7
 rails       2.3.11
 
 - ローカル構築
-既に proguard と jersey はダウンロード済みのものとする。（上記参照）
+アプレットは heroku の方のURLに設定されているのでコンパイル仕直さなければいけません。
+既に proguard と jersey はダウンロード済みのものとします。（上記参照）
+同じパスにこの jar がないと動きません。
  
 git clone git://github.com/alphaneet/sample-mouse-replayer.git
-cd sample-mouse-replayer/
-cd public
+cd sample-mouse-replayer/public
 vim common.scala
+
 * common.scala
-val host = "http://mouse-replayer.heroku.com/"
+val host = "http://mouse-replayer.heroku.com/\"
 |
-val host = "http://localhost:3000/"
+val host = "http://localhost:3000/\"
 *
+
 ./proguard.sh Applet
 ./proguard.sh MouseReplayer
 
 cd ..
 rake db:migrate
 script/server
+
+アプリケーションを起動する場合は別シェルで、同じパスに jersey の jar セットがあるのを確認して
+java -jar MouseReplayer.jar
 
 
 == 連絡先
