@@ -1,5 +1,6 @@
 == デスクトップアプリケーション、アプレット
 - 環境
+OS          JavaVM が入ってる環境なら恐らくどれでも(WindowsXP SP3 と MacOSX Snow Leopard で確認済み)
 java        1.6.0_27
 scala       2.8.1.final 
 processing  1.5.1
