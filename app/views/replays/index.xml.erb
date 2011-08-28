@@ -1,0 +1,8 @@
+<replays>
+  <% @replays.each do |replay| %>
+    <replay>
+      <id><%= replay.id %></id>
+      <name><%= replay.filename %></name>
+    </replay>
+  <% end %>
+</replays>

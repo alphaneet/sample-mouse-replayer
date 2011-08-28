@@ -3,7 +3,7 @@ class CreateReplays < ActiveRecord::Migration
     create_table :replays do |t|
       t.string :filename
       t.integer :size
-      t.xml :text
+      t.text :xml
 
       t.timestamps
     end

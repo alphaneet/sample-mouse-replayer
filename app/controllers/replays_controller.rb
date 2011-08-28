@@ -2,11 +2,11 @@ class ReplaysController < ApplicationController
   # GET /replays
   # GET /replays.xml
   def index
-    @replays = Replay.all
+    @replays = Replay.all.reverse
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @replays }
+      format.xml
     end
   end
 
@@ -17,7 +17,7 @@ class ReplaysController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @replay }
+      format.xml  { render :text => @replay.xml }
     end
   end
 

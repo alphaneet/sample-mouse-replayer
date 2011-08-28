@@ -4,14 +4,12 @@
   <tr>
     <th>Filename</th>
     <th>Size</th>
-    <th>Text</th>
   </tr>
 
 <% @replays.each do |replay| %>
   <tr>
     <td><%=h replay.filename %></td>
     <td><%=h replay.size %></td>
-    <td><%=h replay.text %></td>
     <td><%= link_to 'Show', replay %></td>
     <td><%= link_to 'Edit', edit_replay_path(replay) %></td>
     <td><%= link_to 'Destroy', replay, :confirm => 'Are you sure?', :method => :delete %></td>
