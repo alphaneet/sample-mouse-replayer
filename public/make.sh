@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-if scalac lib.scala common.scala application.scala
+if fsc lib.scala common.scala MouseReplayer.scala
 then
   scala MouseReplayer
 fi

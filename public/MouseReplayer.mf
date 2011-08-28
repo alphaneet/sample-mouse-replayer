@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: MouseReplayer
+Class-Path: jersey-client-1.8.jar jersey-core-1.8.jar mimepull-1.3.jar jersey-multipart-1.8.jar
